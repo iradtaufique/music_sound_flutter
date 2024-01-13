@@ -5,19 +5,20 @@ void main() {
   runApp(
     MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.black,
+        backgroundColor: Colors.indigo,
         body: PlaySound(),
       ),
     ),
   );
 }
 
-class PlaySound extends StatelessWidget {
-  void noteSound(int noteNum) {
-    final player = AudioPlayer();
-    player.play(AssetSource('note$noteNum.wav'));
-  }
+// function that play notes
+void noteSound(int noteNum) {
+  final player = AudioPlayer();
+  player.play(AssetSource('note$noteNum.wav'));
+}
 
+class PlaySound extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SafeArea(
@@ -27,79 +28,78 @@ class PlaySound extends StatelessWidget {
           Expanded(
             child: TextButton(
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.red, foregroundColor: Colors.white),
+                  backgroundColor: Colors.black, foregroundColor: Colors.white),
               onPressed: () {
                 noteSound(1);
               },
               //style: TextButton.styleFrom(foregroundColor: Colors.amber),
-              child: Text('Press Me'),
+              child: Text('Sound 1 Press Me'),
             ),
           ),
           Expanded(
             child: TextButton(
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.amber, foregroundColor: Colors.black),
+                  backgroundColor: Colors.white, foregroundColor: Colors.black),
               onPressed: () {
                 noteSound(2);
               },
               //style: TextButton.styleFrom(foregroundColor: Colors.amber),
-              child: Text('Press Me'),
+              child: Text('Sound 2 Press Me'),
             ),
           ),
           Expanded(
             child: TextButton(
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.green, foregroundColor: Colors.white),
+                  backgroundColor: Colors.black, foregroundColor: Colors.white),
               onPressed: () {
                 noteSound(3);
               },
               //style: TextButton.styleFrom(foregroundColor: Colors.amber),
-              child: Text('Press Me'),
+              child: Text('Sound 3 Press Me'),
             ),
           ),
           Expanded(
             child: TextButton(
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.grey, foregroundColor: Colors.black),
+                  backgroundColor: Colors.white, foregroundColor: Colors.black),
               onPressed: () {
                 noteSound(4);
               },
               //style: TextButton.styleFrom(foregroundColor: Colors.amber),
-              child: Text('Press Me'),
+              child: Text('Sound 4 Press Me'),
             ),
           ),
           Expanded(
             child: TextButton(
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.blue, foregroundColor: Colors.white),
+                  backgroundColor: Colors.black, foregroundColor: Colors.white),
               onPressed: () {
                 noteSound(5);
               },
               //style: TextButton.styleFrom(foregroundColor: Colors.amber),
-              child: Text('Press Me'),
+              child: Text('Sound 5 Press Me'),
             ),
           ),
           Expanded(
             child: TextButton(
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.teal, foregroundColor: Colors.white),
+                  backgroundColor: Colors.white, foregroundColor: Colors.black),
               onPressed: () {
                 noteSound(6);
               },
               //style: TextButton.styleFrom(foregroundColor: Colors.amber),
-              child: Text('Press Me'),
+              child: Text('Sound 6 Press Me'),
             ),
           ),
           Expanded(
             child: TextButton(
               style: TextButton.styleFrom(
-                  backgroundColor: Colors.indigo,
-                  foregroundColor: Colors.white),
+                  backgroundColor: Colors.black, foregroundColor: Colors.white),
               onPressed: () {
                 noteSound(7);
               },
               //style: TextButton.styleFrom(foregroundColor: Colors.amber),
-              child: Text('Press Me'),
+              child: Text('Sound 7 Press Me'),
             ),
           ),
         ],
